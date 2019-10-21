@@ -1,4 +1,6 @@
-public class TicTacToeTile {
+import javax.swing.*;
+
+public class TicTacToeTile extends JButton {
     private int row;
     private int column;
     private String value;
@@ -23,5 +25,6 @@ public class TicTacToeTile {
 
     public void setValue(String value) {
         this.value = value;
+        setText(value);
     }
 }

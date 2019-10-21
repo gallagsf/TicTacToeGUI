@@ -3,12 +3,13 @@ import java.util.Objects;
 
 public class TicTacToe {
     public enum Turn {
-        X ,
+        X,
         O
     }
+
     private static final int DEFAULT_BOARD_SIZE = 3;
     private int boardSize;
-    private TicTacToeTile [][] board;
+    public TicTacToeTile[][] board;
     private Boolean isOver;
 
     private Turn currentTurn;
@@ -50,11 +51,12 @@ public class TicTacToe {
     }
 
     public void playTurn(int row, int col) {
+        //TODO: DOESN'T CHECK IF SPOTS ARE ALREADY USED
         this.board[row][col].setValue(currentTurn.name());
         toggleTurn();
     }
 
-    private void toggleTurn(){
+    private void toggleTurn() {
         currentTurn = currentTurn == Turn.X ? Turn.O : Turn.X;
     }
 
@@ -65,9 +67,9 @@ public class TicTacToe {
         results.add(checkHorizontalWin());
 
         result = results.stream().filter(Objects::nonNull).findFirst().orElse(null);
-        if(result == null) result = isTie() ? "tie": null;
+        if (result == null) result = isTie() ? "tie" : null;
 
-        if(result != null){
+        if (result != null) {
             isOver = true;
         }
     }
@@ -175,18 +177,17 @@ public class TicTacToe {
     public String toString() {
         String r = "";
         for (int row = 0; row < boardSize; row++) {
-            for (int col = 0; col < boardSize; col++){
+            for (int col = 0; col < boardSize; col++) {
                 r = r + " " + board[row][col].getValue() + " ";
-                if(col != boardSize - 1) {
+                if (col != boardSize - 1) {
                     r = r + "|";
                 }
             }
-            if(row != boardSize - 1) {
+            if (row != boardSize - 1) {
                 r = r + "\n-----------\n";
 
             }
         }
         return r;
     }
-
 }

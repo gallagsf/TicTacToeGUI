@@ -8,8 +8,7 @@ public class TicTacToeConsoleRunner {
 
         TicTacToe game = new TicTacToe();
 
-        while (!done)
-        {
+        while (!done) {
             System.out.print(game.toString());
             int row = SafeInput.getRangedInt(in, "Row for " + game.getCurrentTurn().name() + " (-1 to exit): ", -1, 2);
             if (row < 0) System.exit(0);
@@ -18,11 +17,10 @@ public class TicTacToeConsoleRunner {
             game.playTurn(row, col);
             game.calculateResult();
 
-            if(game.isOver()) {
+            if (game.isOver()) {
                 System.out.println("The game is over and the Result is: " + game.getResult());
-                done = SafeInput.getYNConfirm(in,"Play Again?");
+                done = SafeInput.getYNConfirm(in, "Play Again?");
             }
-
         }
     }
 }
