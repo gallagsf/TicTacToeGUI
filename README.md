@@ -1,20 +1,22 @@
 # Lab 5 - Tic Tac Toe GUI
 ## Assignment Self Assessment:
 #### Reflection
-[//]: <> (share your thoughts on the assignment, things you learnt and would like to remember when you look back at this assignment)
+I feel like this assignment was relatively difficult to complete. Figuring out what the provided code was already doing took a while, and figuring out how to build on top of it without breaking anything was a challenge as well. Unfortunately as of right now something went wrong in that second half and I can only play a single game without it breaking.
 
 
 #### Self Assessment
 - [ ] The program runs with no errors.
-- [ ] Create the GUI forms.
-- [ ] The logic is sound.
+- [X] Create the GUI forms.
+- [X] The logic is sound.
 - [ ] Proper usage of Git and GitHub (frequent commits, explanatory commit messages)
 
-**Your Grade:**  /20
+**Your Grade:**  16/20
 
 **Notes:**
+I find that I keep forgetting to frequently commit to github throughout the process of doing assignments. Also as of right now for a reason I can't figure out after the first game is completed, each subsequent game will end immediately after te first button press with a null result.
 
 **How long did it take you to complete this assigment?**
+I stayed for the entire class period working on it, and created the updateGameResults() and resetGame() function on my own time which only took about 10 or 15 minutes, so about 3 or 4 hours total (with help) I would say.
 
 ______________________________________________________________________
 ## Lab Goals:
